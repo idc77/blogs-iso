@@ -30,11 +30,12 @@ export const HomePage = iso(`
     }
   }
 `)(function HomePageComponent({ data }) {
-  console.log(data);
+  console.log("data:", data);
   return (
     <>
       <h1>Blogs</h1>
-      {data && data.map((blog) => <blog.BlogTitle key={blog.id} />)}
+      {data &&
+        data.blogs.edges.map((edge) => <edge.BlogTitle key={edge.node.id} />)}
     </>
   );
 });

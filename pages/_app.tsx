@@ -10,7 +10,7 @@ function makeNetworkRequest<T>(
   queryText: string,
   variables: unknown
 ): Promise<T> {
-  const promise = fetch("http://localhost:8081/query", {
+  const promise = fetch("http://127.0.0.1:8081/query", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

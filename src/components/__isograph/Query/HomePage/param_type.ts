@@ -1,24 +1,27 @@
 
 export type Query__HomePage__param = {
-  blogs: {
-    /**
-A list of edges.
-    */
-    edges: (({
+  readonly data: {
+    readonly blogs: {
       /**
-The item at the end of the edge.
+A list of edges.
       */
-      node: ({
-        id: string,
-        createTime: string,
-        updateTime: (string | null),
-        title: string,
-        slug: string,
-        description: (string | null),
-        tagline: (string | null),
-        ownerID: (string | null),
-        featured: (boolean | null),
-      } | null),
-    } | null))[],
+      readonly edges: (ReadonlyArray<({
+        /**
+The item at the end of the edge.
+        */
+        readonly node: ({
+          readonly id: string,
+          readonly createTime: string,
+          readonly updateTime: (string | null),
+          readonly title: string,
+          readonly slug: string,
+          readonly description: (string | null),
+          readonly tagline: (string | null),
+          readonly ownerID: (string | null),
+          readonly featured: (boolean | null),
+        } | null),
+      } | null)> | null),
+    },
   },
+  readonly parameters: Record<PropertyKey, never>,
 };

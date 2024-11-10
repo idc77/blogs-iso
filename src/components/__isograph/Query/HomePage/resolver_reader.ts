@@ -8,18 +8,21 @@ const readerAst: ReaderAst<Query__HomePage__param> = [
     fieldName: "blogs",
     alias: null,
     arguments: null,
+    condition: null,
     selections: [
       {
         kind: "Linked",
         fieldName: "edges",
         alias: null,
         arguments: null,
+        condition: null,
         selections: [
           {
             kind: "Linked",
             fieldName: "node",
             alias: null,
             arguments: null,
+            condition: null,
             selections: [
               {
                 kind: "Scalar",

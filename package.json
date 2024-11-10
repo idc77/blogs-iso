@@ -10,14 +10,14 @@
   },
   "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447",
   "dependencies": {
-    "@isograph/react": "^0.2.0",
+    "@isograph/react": "0.0.0-main-58e38cf9",
     "next": "15.0.3",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@isograph/babel-plugin": "^0.2.0",
-    "@isograph/compiler": "^0.2.0",
+    "@isograph/babel-plugin": "0.0.0-main-58e38cf9",
+    "@isograph/compiler": "0.0.0-main-58e38cf9",
     "@types/node": "22.9.0",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",

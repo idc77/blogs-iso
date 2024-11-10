@@ -27,16 +27,19 @@ const normalizationAst: NormalizationAst = [
     kind: "Linked",
     fieldName: "blogs",
     arguments: null,
+    concreteType: "BlogConnection",
     selections: [
       {
         kind: "Linked",
         fieldName: "edges",
         arguments: null,
+        concreteType: "BlogEdge",
         selections: [
           {
             kind: "Linked",
             fieldName: "node",
             arguments: null,
+            concreteType: "Blog",
             selections: [
               {
                 kind: "Scalar",
@@ -95,8 +98,12 @@ const artifact: IsographEntrypoint<
   Query__HomePage__output_type
 > = {
   kind: "Entrypoint",
-  queryText,
-  normalizationAst,
+  networkRequestInfo: {
+    kind: "NetworkRequestInfo",
+    queryText,
+    normalizationAst,
+  },
+  concreteType: "Query",
   readerWithRefetchQueries: {
     kind: "ReaderWithRefetchQueries",
     nestedRefetchQueries,
