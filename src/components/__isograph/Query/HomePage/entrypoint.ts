@@ -9,14 +9,10 @@ const queryText = 'query HomePage  {\
     edges {\
       node {\
         id,\
-        createTime,\
         description,\
-        featured,\
-        ownerID,\
         slug,\
         tagline,\
         title,\
-        updateTime,\
       },\
     },\
   },\
@@ -48,22 +44,7 @@ const normalizationAst: NormalizationAst = [
               },
               {
                 kind: "Scalar",
-                fieldName: "createTime",
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
                 fieldName: "description",
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "featured",
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "ownerID",
                 arguments: null,
               },
               {
@@ -79,11 +60,6 @@ const normalizationAst: NormalizationAst = [
               {
                 kind: "Scalar",
                 fieldName: "title",
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "updateTime",
                 arguments: null,
               },
             ],

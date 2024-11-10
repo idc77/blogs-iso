@@ -17,14 +17,7 @@ export const HomePage = iso(`
       edges{
         node {
           id
-          createTime
-          updateTime
-          title
-          slug
-          description
-          tagline
-          ownerID
-          featured
+          BlogTitle
         }
       }
     }

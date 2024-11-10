@@ -1,3 +1,4 @@
+import { type Blog__BlogTitle__output_type } from '../../Blog/BlogTitle/output_type';
 
 export type Query__HomePage__param = {
   readonly data: {
@@ -11,14 +12,7 @@ The item at the end of the edge.
         */
         readonly node: ({
           readonly id: string,
-          readonly createTime: string,
-          readonly updateTime: (string | null),
-          readonly title: string,
-          readonly slug: string,
-          readonly description: (string | null),
-          readonly tagline: (string | null),
-          readonly ownerID: (string | null),
-          readonly featured: (boolean | null),
+          readonly BlogTitle: Blog__BlogTitle__output_type,
         } | null),
       } | null)> | null),
     },

@@ -1,6 +1,7 @@
 import type {ComponentReaderArtifact, ExtractSecondParam, ReaderAst } from '@isograph/react';
 import { Query__HomePage__param } from './param_type';
 import { HomePage as resolver } from '../../../HomePage';
+import Blog__BlogTitle__resolver_reader from '../../Blog/BlogTitle/resolver_reader';
 
 const readerAst: ReaderAst<Query__HomePage__param> = [
   {
@@ -31,52 +32,11 @@ const readerAst: ReaderAst<Query__HomePage__param> = [
                 arguments: null,
               },
               {
-                kind: "Scalar",
-                fieldName: "createTime",
-                alias: null,
+                kind: "Resolver",
+                alias: "BlogTitle",
                 arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "updateTime",
-                alias: null,
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "title",
-                alias: null,
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "slug",
-                alias: null,
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "description",
-                alias: null,
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "tagline",
-                alias: null,
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "ownerID",
-                alias: null,
-                arguments: null,
-              },
-              {
-                kind: "Scalar",
-                fieldName: "featured",
-                alias: null,
-                arguments: null,
+                readerArtifact: Blog__BlogTitle__resolver_reader,
+                usedRefetchQueries: [],
               },
             ],
           },
