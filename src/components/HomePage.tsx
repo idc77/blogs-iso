@@ -28,7 +28,10 @@ export const HomePage = iso(`
     <>
       <h1>Blogs</h1>
       {data &&
-        data.blogs.edges.map((edge) => <edge.BlogTitle key={edge.node.id} />)}
+        data.blogs?.edges?.map((edge) => {
+          const node = edge?.node;
+          return <node.BlogTitle key={node?.id} />;
+        })}
     </>
   );
 });
