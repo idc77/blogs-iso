@@ -1,6 +1,8 @@
 import type { IsographEntrypoint } from '@isograph/react';
 import { type Blog__BlogTitle__param } from './Blog/BlogTitle/param_type';
+import { type Query__BlogsPage__param } from './Query/BlogsPage/param_type';
 import { type Query__HomePage__param } from './Query/HomePage/param_type';
+import entrypoint_Query__BlogsPage from '../__isograph/Query/BlogsPage/entrypoint';
 import entrypoint_Query__HomePage from '../__isograph/Query/HomePage/entrypoint';
 
 // This is the type given to regular client fields.
@@ -56,8 +58,16 @@ export function iso<T>(
 ): IdentityWithParamComponent<Blog__BlogTitle__param>;
 
 export function iso<T>(
+  param: T & MatchesWhitespaceAndString<'field Query.BlogsPage', T>
+): IdentityWithParamComponent<Query__BlogsPage__param>;
+
+export function iso<T>(
   param: T & MatchesWhitespaceAndString<'field Query.HomePage', T>
 ): IdentityWithParamComponent<Query__HomePage__param>;
+
+export function iso<T>(
+  param: T & MatchesWhitespaceAndString<'entrypoint Query.BlogsPage', T>
+): typeof entrypoint_Query__BlogsPage;
 
 export function iso<T>(
   param: T & MatchesWhitespaceAndString<'entrypoint Query.HomePage', T>

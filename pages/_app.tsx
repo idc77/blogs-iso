@@ -1,21 +1,17 @@
-import { useMemo, Suspense } from "react";
-import type { AppProps } from "next/app";
-import {
-  createIsographEnvironment,
-  createIsographStore,
-  IsographEnvironmentProvider,
-} from "@isograph/react";
+import {Suspense, useMemo} from "react";
+import type {AppProps} from "next/app";
+import {createIsographEnvironment, createIsographStore, IsographEnvironmentProvider,} from "@isograph/react";
 
 function makeNetworkRequest<T>(
   queryText: string,
   variables: unknown
 ): Promise<T> {
-  const promise = fetch("http://127.0.0.1:8081/query", {
+  return fetch("http://localhost:8081/query", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ query: queryText, variables }),
+    body: JSON.stringify({query: queryText, variables}),
   }).then(async (response) => {
     const json = await response.json();
 
@@ -27,7 +23,6 @@ function makeNetworkRequest<T>(
       });
     }
   });
-  return promise;
 }
 
 export default function App({ Component, pageProps }: AppProps) {

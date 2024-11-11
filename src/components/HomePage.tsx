@@ -13,7 +13,6 @@ export const HomePage = iso(`
     }
   }
 `)(function HomePageComponent({ data }) {
-  console.log("data:", data);
   return (
     <>
       <h1>Blogs</h1>
