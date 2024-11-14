@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { iso } from "@iso";
 
 export const HomePage = iso(`

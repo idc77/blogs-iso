@@ -1,6 +1,6 @@
 import type {ComponentReaderArtifact, ExtractSecondParam, ReaderAst } from '@isograph/react';
 import { Mutation__CreateBlog__param } from './param_type';
-import { createBlog as resolver } from '../../../Blog/BlogCreatePage';
+import { createBlog as resolver } from '../../../Blog/BlogCreate';
 
 const readerAst: ReaderAst<Mutation__CreateBlog__param> = [
   {
