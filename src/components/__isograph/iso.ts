@@ -1,7 +1,10 @@
 import type { IsographEntrypoint } from '@isograph/react';
+import { type Blog__BlogCreatePage__param } from './Blog/BlogCreatePage/param_type';
 import { type Blog__BlogTitle__param } from './Blog/BlogTitle/param_type';
+import { type Mutation__CreateBlog__param } from './Mutation/CreateBlog/param_type';
 import { type Query__BlogsPage__param } from './Query/BlogsPage/param_type';
 import { type Query__HomePage__param } from './Query/HomePage/param_type';
+import entrypoint_Mutation__CreateBlog from '../__isograph/Mutation/CreateBlog/entrypoint';
 import entrypoint_Query__BlogsPage from '../__isograph/Query/BlogsPage/entrypoint';
 import entrypoint_Query__HomePage from '../__isograph/Query/HomePage/entrypoint';
 
@@ -54,8 +57,16 @@ type MatchesWhitespaceAndString<
 > = Whitespace<T> extends `${TString}${string}` ? T : never;
 
 export function iso<T>(
+  param: T & MatchesWhitespaceAndString<'field Blog.BlogCreatePage', T>
+): IdentityWithParamComponent<Blog__BlogCreatePage__param>;
+
+export function iso<T>(
   param: T & MatchesWhitespaceAndString<'field Blog.BlogTitle', T>
 ): IdentityWithParamComponent<Blog__BlogTitle__param>;
+
+export function iso<T>(
+  param: T & MatchesWhitespaceAndString<'field Mutation.CreateBlog', T>
+): IdentityWithParamComponent<Mutation__CreateBlog__param>;
 
 export function iso<T>(
   param: T & MatchesWhitespaceAndString<'field Query.BlogsPage', T>
@@ -64,6 +75,10 @@ export function iso<T>(
 export function iso<T>(
   param: T & MatchesWhitespaceAndString<'field Query.HomePage', T>
 ): IdentityWithParamComponent<Query__HomePage__param>;
+
+export function iso<T>(
+  param: T & MatchesWhitespaceAndString<'entrypoint Mutation.CreateBlog', T>
+): typeof entrypoint_Mutation__CreateBlog;
 
 export function iso<T>(
   param: T & MatchesWhitespaceAndString<'entrypoint Query.BlogsPage', T>

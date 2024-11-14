@@ -1,6 +1,6 @@
 import type {ComponentReaderArtifact, ExtractSecondParam, ReaderAst } from '@isograph/react';
 import { Blog__BlogTitle__param } from './param_type';
-import { BlogTitle as resolver } from '../../../BlogTitle';
+import { BlogTitle as resolver } from '../../../Blog/BlogTitle';
 
 const readerAst: ReaderAst<Blog__BlogTitle__param> = [
   {

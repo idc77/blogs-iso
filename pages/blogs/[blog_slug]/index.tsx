@@ -1,4 +1,4 @@
-import BlogsPageRoute from '@/BlogsPageRoute';
+import BlogsPageRoute from '@/Blog/BlogsPageRoute';
 
 export default function Blogs() {
     return <BlogsPageRoute/>

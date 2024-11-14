@@ -1,6 +1,11 @@
 import {Suspense, useMemo} from "react";
 import type {AppProps} from "next/app";
 import {createIsographEnvironment, createIsographStore, IsographEnvironmentProvider,} from "@isograph/react";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 function makeNetworkRequest<T>(
   queryText: string,
