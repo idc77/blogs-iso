@@ -11,7 +11,7 @@ function makeNetworkRequest<T>(
   queryText: string,
   variables: unknown
 ): Promise<T> {
-  return fetch("http://localhost:8081/query", {
+  return fetch("http://188.40.55.11:8081/query", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

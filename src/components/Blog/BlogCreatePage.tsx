@@ -4,7 +4,7 @@ export const BlogCreatePage = iso(`
     field Query.BlogCreatePage @component {
         BlogCreate
     }
-`)(function BlogCreatePageComponent(){
+`)(function BlogCreatePageComponent({data}){
     return (
         <></>
     )
