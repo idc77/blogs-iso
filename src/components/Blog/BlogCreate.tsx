@@ -1,6 +1,6 @@
 import {iso} from '@iso';
 import {useImperativeReference} from '@isograph/react';
-import {Alert, Container, Paper, TextField} from '@mui/material';
+import {Alert, Button, Container, Paper, TextField} from '@mui/material';
 import {Controller, SubmitHandler, useForm} from 'react-hook-form';
 import slugify from 'slugify';
 
@@ -85,6 +85,7 @@ export const BlogCreate = iso(`
                             )}
                         >
                         </Controller>
+                        <Button type="submit">Create Blog</Button>
                     </form>
                 </Paper>
             </Container>
